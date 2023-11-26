@@ -1,0 +1,46 @@
+mql5
+// Program: Outside The Box MT4
+// Developer's Site: forexroboteasy.com
+// Developer: Forex Robot Easy Team
+
+// List of currency pairs to trade
+string[] CurrencyPairs = {'NZDCHF', 'GBPAUD', 'GBPNZD', 'GBPCAD', 'GBPUSD', 'NZDJPY', 'USDJPY', 'CHFJPY'};
+
+// Define trade management functions
+int OpenTrade(string symbol, double lots, ENUM_ORDER_TYPE orderType, double sl, double tp)
+{
+    // Add your code here to open a trade
+    return 0;
+}
+
+int CloseTrade(int ticket)
+{
+    // Add your code here to close a trade
+    return 0;
+}
+
+// Define backtesting function
+int Backtest()
+{
+    // Add your code here to perform backtesting using MT5
+    return 0;
+}
+
+// Main function
+void OnStart()
+{
+    // Loop through each currency pair
+    for (int i = 0; i < ArraySize(CurrencyPairs); i++)
+    {
+        string symbol = CurrencyPairs[i];
+        
+        // Open a buy trade
+        OpenTrade(symbol, 0.01, ORDER_TYPE_BUY, 100, 200);
+        
+        // Close the trade
+        CloseTrade(i);
+    }
+    
+    // Perform backtesting
+    Backtest();
+}
